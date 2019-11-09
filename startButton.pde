@@ -14,13 +14,19 @@ class Button {
   }
   
   void Draw() {
-    fill(218);
+    if (MouseIsOver()) {
+      fill(176, 227, 185);
+    } 
+    else { fill(218); }
     stroke(141);
     rect(x, y, w, h, 10);
     textAlign(CENTER, CENTER);
     textSize(15);
     fill(0);
     text(label, x + (w / 2), y + (h / 2));
+    
+       
+    
   }
   
   boolean MouseIsOver() {
