@@ -21,7 +21,7 @@ if (right) {
 
 void keyPressed () {
 if (key == CODED) {
-{if ( (keyCode == LEFT) && (binX > radius) )
+{if ( (keyCode == LEFT) && (binX > radius+5) )
   {
   left = true;
   } else {
