@@ -1,0 +1,13 @@
+int binX;
+int binY;
+int binSpeed;
+
+void Compost_Game () {
+
+//frameRate(60); 
+
+binX = width/2;
+//binY = 
+
+
+}

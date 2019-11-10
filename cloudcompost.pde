@@ -36,7 +36,7 @@ images[6] = loadImage("diaper.png");
 images[7] = loadImage("ceramic.png");
 images[8] = loadImage("lightbulb.png");
 
-PImage [] bins = new PImage[2]
+PImage [] bins = new PImage[3];
 bins[0] = loadImage("compost_bin.png");
 bins[1] = loadImage("recycling_bin.png");
 bins[2] = loadImage("trash_bin.png");
