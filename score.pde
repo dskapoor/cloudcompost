@@ -5,10 +5,10 @@ class ScoreDisplay {
   }
 
   void display() {
-    fill(218);
-    rect(670, 20, 100, 50, 10);
+    fill(176, 227, 185);
+    rect(625, 20, 150, 60, 10);
     fill(3, 3, 3);
     textSize(18);
-    text("Score = " + score, 720, 45); 
+    text("SCORE = " + score, 700, 50); 
   }
 }
