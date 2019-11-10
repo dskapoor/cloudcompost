@@ -1,12 +1,11 @@
 
-<<<<<<< HEAD
 
 //// Example 10-10: The raindrop catching game
-=======
+
 //void Rain () {
 
 //class Rain {
->>>>>>> e5680dde2cf9d3aa37c780d95692f01c7dbac236
+
 
 //Catcher catcher;    // One catcher object
 //Timer timer;        // One timer object
@@ -14,7 +13,6 @@
 //int totalDrops = 0; // totalDrops
 
 
-<<<<<<< HEAD
 
 //void Rain () {
 //  size(480, 270);
@@ -52,6 +50,6 @@
 //      drops[i].caught();
 //    }
 //  }
-=======
->>>>>>> e5680dde2cf9d3aa37c780d95692f01c7dbac236
+
+
 //}
