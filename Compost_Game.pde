@@ -1,3 +1,4 @@
+int score = 0; 
 int binX = 350;
 int binY = 500;
 int binSpeed;
@@ -5,7 +6,7 @@ int radius;
 boolean left, right;
 
 void Compost_Game () {
-image(bins[0], binX, binY, 80, 80); 
+image(bins[0], binX, binY, 120, 120); 
 binSpeed = 5;
 radius = 10;
 //binX = 350;
@@ -15,6 +16,8 @@ if (left) {
 }
 if (right) {
     binX = binX + binSpeed;
+
+
 }
   
 }
