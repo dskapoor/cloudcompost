@@ -17,7 +17,7 @@ ScoreDisplay score = new ScoreDisplay();
 ArrayList<Drop> dropss = new ArrayList<Drop>();
 ArrayList<TimeoutText> removed = new ArrayList<TimeoutText>();
 
-int gameTime = 5;
+int gameTime = 30;
 
 void Game() {
   stroke(#1C7910);
@@ -116,7 +116,7 @@ void Game() {
   }
 
   score.display();
-  
+
   if (gameTime == 0) {
     scene = 4;
   }

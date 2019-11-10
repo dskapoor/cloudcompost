@@ -12,9 +12,9 @@ void End_Page() {
   textSize(50);
   text("Final Score: " + score.score, width/2, height/2);
 
-  playAgain = new Button("Play Again", width/2 - 125, height - 100, 200, 75, 20);
+  playAgain = new Button("Play Again", width/2 - 125, height - 225, 200, 75, 25);
   playAgain.Draw();
-  quit = new Button("Quit", width/2 - 125, height - 200, 200, 75, 20);
+  quit = new Button("Quit", width/2 - 125, height - 125, 200, 75, 25);
   quit.Draw();
 
   image(sun_clouds, width/2-150, 25, 300, 200);
@@ -23,4 +23,8 @@ void End_Page() {
   image(cloud, b, 0, 500, 250);
   a-=5;
   b+=5;
+
+  textSize(32);
+  textAlign(CENTER); 
+  text("You're on your way to saving the world!", 375, height/2 + 50);
 }

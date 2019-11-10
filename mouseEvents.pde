@@ -27,5 +27,16 @@ void mouseClicked() {
       activeType = Type.TRASH;
       scene = 3;
     }
+  } else if (scene == 4) {
+    if (playAgain.MouseIsOver() == true) {
+      gameTime = 30;
+      timer = 0;
+      score.score = 0;
+      dropss = new ArrayList<Drop>();
+      scene = 2;
+    }
+    if (quit.MouseIsOver() == true) {
+      exit();
+    }
   }
 } 
