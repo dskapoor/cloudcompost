@@ -1,23 +1,14 @@
 class ScoreDisplay { 
-  String label; 
-  int score; 
-  float x;
-  float y; 
-  float w;
-  float h; 
-  int ts;
-  
-  ScoreDisplay(String labelSD, float xposSD, float yposSD, float widthSD, float heightSD, int textSizeSD) {
-    label = labelSD;
-    x = xposSD;
-    y = yposSD;
-    w = widthSD;
-    h = heightSD;
-    ts = textSizeSD;
-}
+  int score = 0;
 
-void display() {
-   text("Score = " +score, 750, 750); 
-   
-}
+  ScoreDisplay() {
+  }
+
+  void display() {
+    fill(218);
+    rect(670, 20, 100, 50, 10);
+    fill(3, 3, 3);
+    textSize(18);
+    text("Score = " + score, 720, 45); 
+  }
 }

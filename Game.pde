@@ -1,4 +1,3 @@
-int score = 0; 
 int binX = 350;
 int binY = 500;
 int binSpeed = 5;
@@ -6,7 +5,7 @@ int radius = 10;
 boolean left, right;
 boolean goodCollision;
 boolean badCollision; 
-
+ScoreDisplay score = new ScoreDisplay();
 ArrayList<Drop> dropss = new ArrayList<Drop>();
 
 void Game() {
@@ -39,6 +38,8 @@ void Game() {
       binX = binX + binSpeed;
     }
   }
+  
+  score.display();
 }
 
 
@@ -81,10 +82,10 @@ void keyReleased () {
 void scoreCounter () {
 
 
-  //insert code so that when correct collision occurs, score = score + 5
-  if ( (goodCollision == true) ) { 
-    score = score + 5;
-  } else if ( (badCollision == true) ) {    
-    score = score - 5;
-  }
+//  //insert code so that when correct collision occurs, score = score + 5
+//  if ( (goodCollision == true) ) { 
+//    score = score + 5;
+//  } else if ( (badCollision == true) ) {    
+//    score = score - 5;
+//  }
 } 
