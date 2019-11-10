@@ -14,14 +14,17 @@ void mouseClicked() {
   else if (scene == 2) {
     if (compostButton.MouseIsOver() == true) {
       activeBin = bins[0];
+      activeType = Type.COMPOST;
       scene = 3;
     }
     if (recyclingButton.MouseIsOver() == true) {
       activeBin = bins[1];
+      activeType = Type.RECYCLE;
       scene = 3;
     }
     if (trashButton.MouseIsOver() == true) {
       activeBin = bins[2];
+      activeType = Type.TRASH;
       scene = 3;
     }
   }

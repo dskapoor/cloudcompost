@@ -1,13 +1,20 @@
+enum Type {
+  COMPOST, RECYCLE, TRASH;
+}
+
 class Drop {
   float x, y; 
   float speed;
   PImage p;
+  int time;
+  Type type;
 
-  Drop(PImage p) {
+  Drop(PImage p, Type t) {
     x = random(width);
     y = -20;
-    speed = random(1, 3);
+    speed = random(2, 4);
     this.p = p;
+    type = t;
   }
 
   void display() {

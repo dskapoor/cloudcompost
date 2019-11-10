@@ -20,9 +20,6 @@ PImage[] bins;
 PImage cloud;
 PImage storm_cloud; 
 
-Drop[] drops;
-Drop d;
-
 int timer = 0;
 
 void setup () {
@@ -50,12 +47,6 @@ void setup () {
   bins[0] = loadImage("compost_bin.png");
   bins[1] = loadImage("recycling_bin.png");
   bins[2] = loadImage("trash_bin.png");
-
-  drops = new Drop[9];
-  for (int i = 0; i < images.length; i++) {
-    drops[i] = new Drop(images[i]);
-  }
-  d = new Drop(images[0]);
 
   cloud = loadImage("cloud.png");
   storm_cloud = loadImage("dark_cloud.png"); 
