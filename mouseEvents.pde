@@ -32,6 +32,8 @@ void mouseClicked() {
       gameTime = 30;
       timer = 0;
       score.score = 0;
+      a = 100;
+      b = 200;
       dropss = new ArrayList<Drop>();
       scene = 2;
     }
