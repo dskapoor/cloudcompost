@@ -1,3 +1,5 @@
+Button nextButton;
+
 void Info_Page () {
 
 PFont TitleFont;
@@ -21,5 +23,9 @@ text( "The U.S. EPA states that about 24% of our waste is organic material that 
 
 
 text( "Educating the public on the difference between LANDFILL, RECYCLE, and COMPOST is KEY", 375, 400); 
-  
+
+
+nextButton = new Button("Next", 300, 450, 200, 100, 20);
+
+nextButton.Draw ();
 }

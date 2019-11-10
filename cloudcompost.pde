@@ -12,15 +12,14 @@ PImage lightbulb;
 PFont TitleFont;
 PFont BodyFont;
 
-
 void setup () {
+//scene = 0;
 size(800, 600);
 
 TitleFont = loadFont("HannotateSC-W7-48.vlw");
 BodyFont = loadFont("HannotateSC-W7-15.vlw");
 textFont(TitleFont);
 
- 
 background(110, 202, 227);
 //sets background color to blue
 PImage[] images = new PImage[9];
@@ -36,16 +35,17 @@ images[8] = loadImage("lightbulb.png");
 
 }
 
-
 void draw () {
 background(110, 202, 227);
 //sets background color to blue
+//println(scene);
 
 
 if (scene == 0) {
 landingPage (); 
 } 
-else if (scene ==1) {
+
+else if (scene == 1) {
 Info_Page ();
 }
 //image(apple, 100,100, 30, 30);  
