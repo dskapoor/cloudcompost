@@ -11,4 +11,12 @@ void mouseClicked() {
   }
   }
    //println("END"+ scene);
+   
+   else if (scene == 2) {
+  if (nextButton2.MouseIsOver() == true) {
+    scene = 3;
+  } 
+  }
+  
+
 } 
