@@ -17,6 +17,7 @@ PFont BodyFont;
 
 PImage[] images;
 PImage[] bins;
+PImage cloud;
 
 void setup () {
 //scene = 0;
@@ -43,6 +44,8 @@ bins = new PImage[3];
 bins[0] = loadImage("compost_bin.png");
 bins[1] = loadImage("recycling_bin.png");
 bins[2] = loadImage("trash_bin.png");
+
+cloud = loadImage("cloud.jpg");
 
 }
 

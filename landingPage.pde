@@ -2,6 +2,8 @@ Button startButton;
 
 void landingPage () {
 
+image(cloud, 90, 275, 50, 50); 
+  
 textSize(32);
 textAlign(CENTER); 
 text("Cloudy with a Chance of Cleanup", 400, 80);
