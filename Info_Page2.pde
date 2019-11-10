@@ -22,7 +22,7 @@ image(images[8], 660,350, 50, 50);
 
 
 
-nextButton2 = new Button("Next", 300, 450, 200, 100, 20);
+nextButton2 = new Button("NEXT", 300, 450, 200, 100, 20);
 
 nextButton2.Draw ();
 }
