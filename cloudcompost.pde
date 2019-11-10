@@ -1,14 +1,17 @@
 int scene = 0;
 PImage apple;
 PImage bowl;
-PImage tea;
+PImage coffee;
 PImage letter;
 PImage can;
 PImage water;
 PImage diaper;
 PImage ceramic;
 PImage lightbulb;
-PImage[] images;
+PImage compost;
+PImage recycling;
+PImage trash;
+
 PFont TitleFont;
 PFont BodyFont;
 
@@ -22,16 +25,21 @@ textFont(TitleFont);
 
 background(110, 202, 227);
 //sets background color to blue
-images = new PImage[9];
+PImage[] images = new PImage[9];
 images[0] = loadImage("apple.png");
 images[1] = loadImage("bowl.png");
-images[2] = loadImage("tea-bag.png");
+images[2] = loadImage("coffee_filter.jpeg");
 images[3] = loadImage("letter.png");
 images[4] = loadImage("can.png");
 images[5] = loadImage("water.png");
 images[6] = loadImage("diaper.png");
 images[7] = loadImage("ceramic.png");
 images[8] = loadImage("lightbulb.png");
+
+PImage [] bins = new PImage[2]
+bins[0] = loadImage("compost_bin.png");
+bins[1] = loadImage("recycling_bin.png");
+bins[2] = loadImage("trash_bin.png");
 
 }
 
@@ -47,15 +55,6 @@ landingPage ();
 
 else if (scene == 1) {
 Info_Page ();
-}
-
-else if (scene == 2) {
-Info_Page2 ();
-}
-
-else if (scene == 3) {
-Compost_Game ();
-
 }
 //image(apple, 100,100, 30, 30);  
 }
