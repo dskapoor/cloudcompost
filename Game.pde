@@ -2,6 +2,8 @@ int binX = 350;
 int binY = 500;
 int binSpeed = 5;
 int radius = 10; 
+int x3 = 0;
+int x4 = 300; 
 boolean left, right;
 boolean goodCollision;
 
@@ -14,8 +16,24 @@ ArrayList<Drop> dropss = new ArrayList<Drop>();
 
 void Game() {
 
-
+  image(storm_cloud, x3, 120, 100, 100);
+  image(storm_cloud, x4, 100, 200, 200);
+  image(storm_cloud, x3, 110, 300, 300);
+  image(storm_cloud, x4, 80, 110, 110);
+  image(storm_cloud, x3, 100, 300, 300);
+  x3+=.6; 
+  x4+=.4;
   
+  if ((x3 > width)) { 
+    x3 = 0; 
+  }
+  
+    if ((x4 > width)) { 
+    x4 = 10; 
+  }
+ 
+  
+
   timer++;
   if (timer % 100 == 0) {
     Drop d = new Drop(images[(int) random(0, 9)]);
@@ -45,16 +63,8 @@ void Game() {
       binX = binX + binSpeed;
     }
   }
-
+  
   score.display();
-
-  for (int i = 0; i < dropss.size(); i++) {
-    if (dropss.get(i).y > (binY - 50) && dropss.get(i).y < (binY + 0) && dropss.get(i).x > (binX - 20) && dropss.get(i).x < (binX + 60)) {
-      Drop d = dropss.remove(i);
-      text("+100", d.x, d.y);
-      score.score+= 100;
-    }
-  }
 }
 
 
@@ -97,10 +107,10 @@ void keyReleased () {
 void scoreCounter () {
 
 
-  //  //insert code so that when correct collision occurs, score = score + 5
-  //  if ( (goodCollision == true) ) { 
-  //    score = score + 5;
-  //  } else if ( (badCollision == true) ) {    
-  //    score = score - 5;
-  //  }
+//  //insert code so that when correct collision occurs, score = score + 5
+//  if ( (goodCollision == true) ) { 
+//    score = score + 5;
+//  } else if ( (badCollision == true) ) {    
+//    score = score - 5;
+//  }
 } 
