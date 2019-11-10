@@ -18,7 +18,8 @@ PFont BodyFont;
 PImage[] images;
 PImage[] bins;
 PImage cloud;
-PImage storm_cloud; 
+PImage storm_cloud;
+PImage sun_clouds; 
 
 int timer = 0;
 
@@ -50,6 +51,7 @@ void setup () {
 
   cloud = loadImage("cloud.png");
   storm_cloud = loadImage("dark_cloud.png"); 
+  sun_clouds = loadImage("sun_clouds.png"); 
 }
 
 void draw () {
