@@ -5,7 +5,7 @@ int binSpeed;
 
 void Compost_Game () {
 
-image(bins[0], 90,275, 50, 50); 
+image(bins[0], 350, 500, 80, 80); 
   
   
   
