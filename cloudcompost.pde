@@ -68,5 +68,7 @@ void draw () {
     Info_Page2 ();
   } else if (scene == 3) {
     Game();
+  } else if (scene == 4) {
+    End_Page();
   }
 }
