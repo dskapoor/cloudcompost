@@ -2,6 +2,8 @@ int binX = 350;
 int binY = 500;
 int binSpeed = 8;
 int radius = 10; 
+int x3 = 0;
+int x4 = 300; 
 boolean left, right;
 boolean goodCollision;
 
@@ -15,8 +17,21 @@ ArrayList<TimeoutText> removed = new ArrayList<TimeoutText>();
 
 
 void Game() {
+  image(storm_cloud, x3, 120, 100, 100);
+  image(storm_cloud, x4, 100, 200, 200);
+  image(storm_cloud, x3, 110, 300, 300);
+  image(storm_cloud, x4, 80, 110, 110);
+  image(storm_cloud, x3, 100, 300, 300);
+  x3+=.6; 
+  x4+=.4;
 
+  if ((x3 > width)) { 
+    x3 = 0;
+  }
 
+  if ((x4 > width)) { 
+    x4 = 10;
+  }
 
   timer++;
   if (timer % 100 == 0) {
@@ -24,11 +39,9 @@ void Game() {
     Drop d;
     if (r >= 0 && r <= 2) {
       d = new Drop(images[r], Type.COMPOST);
-    }
-    else if (r >= 3 && r <= 6) {
+    } else if (r >= 3 && r <= 6) {
       d = new Drop(images[r], Type.RECYCLE);
-    }
-    else {
+    } else {
       d = new Drop(images[r], Type.TRASH);
     }
     dropss.add(d);
