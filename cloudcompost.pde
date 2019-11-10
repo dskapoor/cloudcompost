@@ -32,7 +32,7 @@ images[2] = loadImage("coffee_filter.jpeg");
 images[3] = loadImage("letter.png");
 images[4] = loadImage("can.png");
 images[5] = loadImage("water.png");
-images[6] = loadImage("diper.png");
+images[6] = loadImage("diaper.png");
 images[7] = loadImage("ceramic.png");
 images[8] = loadImage("lightbulb.png");
 
