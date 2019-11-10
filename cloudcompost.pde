@@ -1,7 +1,7 @@
 int scene = 0;
 PImage apple;
 PImage bowl;
-PImage coffee;
+PImage tea;
 PImage letter;
 PImage can;
 PImage water;
@@ -32,7 +32,7 @@ background(110, 202, 227);
 images = new PImage[9];
 images[0] = loadImage("apple.png");
 images[1] = loadImage("bowl.png");
-images[2] = loadImage("coffee_filter.jpeg");
+images[2] = loadImage("tea-bag.png");
 images[3] = loadImage("letter.png");
 images[4] = loadImage("can.png");
 images[5] = loadImage("water.png");
