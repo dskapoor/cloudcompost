@@ -2,11 +2,11 @@ int binX = 350;
 int binY = 500;
 int binSpeed = 8;
 int radius = 10; 
-int x3 = 70;
-int x4 = 200;
+int x3 = -200;
+int x4 = 0;
 int x5 = 400;
-int x6 = 500;
-int x7 = 600;
+int x6 = 700;
+int x7 = 800;
 boolean left, right;
 boolean goodCollision;
 
@@ -20,26 +20,6 @@ ArrayList<TimeoutText> removed = new ArrayList<TimeoutText>();
 
 
 void Game() {
-  image(storm_cloud, x3, 20, 200, 140);
-  image(storm_cloud, x4, 20, 300, 200);
-  image(storm_cloud, x5, 10, 200, 140);
-  image(storm_cloud, x6, 30, 300, 200);
-  image(storm_cloud, x7, 10, 200, 140);
-  x3+=1.01; 
-  x4+=1.04;
-  x5+=1.05;
-  x6+=1.02;
-  x7+=1.01;
- 
- //for int x 
- //if ((x3 > width)) { 
- //    x3 = 0; 
- //   }
-  
-  //  if ((x4 > width)) { 
-  //  x4 = 10; 
-  //}
- 
   timer++;
   if (timer % 100 == 0) {
     int r = (int) random(0, 9);
@@ -95,6 +75,36 @@ void Game() {
     if (removed.get(i).timer > 60) {
       removed.remove(i);
     }
+  }
+
+
+
+  image(storm_cloud, x3, 10, 200, 140);
+  image(storm_cloud, x4, 5, 300, 200);
+  image(storm_cloud, x5, 10, 200, 140);
+  image(storm_cloud, x6, 10, 300, 200);
+  image(storm_cloud, x7, 5, 200, 140);
+  x3 += 1;
+  x3+=2; 
+  x4+=1;
+  x5+=2;
+  x6+=3;
+  x7+=1;
+
+  if (x3 > width) {
+    x3 = -100;
+  }
+  if (x4 > width) {
+    x4 = -100;
+  }
+  if (x5 > width) {
+    x5 = -100;
+  }
+  if (x6 > width) {
+    x6 = -100;
+  }
+  if (x7 > width) {
+    x7 = -100;
   }
 }
 
