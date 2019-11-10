@@ -15,10 +15,12 @@ textFont(TitleFont);
 void draw () {
 background(110, 202, 227);
 //sets background color to blue
+//println(scene);
 
 if (scene == 0) {
 landingPage (); 
 } 
+
 else if (scene == 1) {
 Info_Page ();
 }

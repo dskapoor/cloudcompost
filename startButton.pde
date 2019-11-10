@@ -18,11 +18,7 @@ class Button {
   void Draw() {
     if (MouseIsOver()) {
       fill(176, 227, 185);
-    if (mousePressed) {
-      //scene+=1;
-      scene=1;
-    }
-      
+    
     } 
     else { fill(218); }
     stroke(141);
