@@ -1,3 +1,1 @@
-void Compost_Game () {
-  
-}
+void Compost_Game;
