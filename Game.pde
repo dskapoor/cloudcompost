@@ -17,9 +17,12 @@ ScoreDisplay score = new ScoreDisplay();
 ArrayList<Drop> dropss = new ArrayList<Drop>();
 ArrayList<TimeoutText> removed = new ArrayList<TimeoutText>();
 
-
+int gameTime = 60;
 
 void Game() {
+  stroke(#1C7910);
+  fill(#1C7910);
+  rect(0, height-40, 800, 40, 0);
   timer++;
   if (timer % 60 == 0) {
     int r = (int) random(0, 9);
@@ -57,8 +60,6 @@ void Game() {
       binX = binX + binSpeed;
     }
   }
-
-  score.display();
 
   for (int i = 0; i < dropss.size(); i++) {
     if (dropss.get(i).y > (binY - 50) && dropss.get(i).y < (binY + 0) && dropss.get(i).x > (binX - 20) && dropss.get(i).x < (binX + 60)) {
@@ -106,8 +107,16 @@ void Game() {
   if (x7 > width) {
     x7 = -100;
   }
-}
 
+  textSize(20);
+  fill(0);
+  text("Time: " + gameTime, 55, 25);
+  if (timer % 60 == 0) {
+    gameTime -= 1;
+  }
+
+  score.display();
+}
 
 void keyPressed () {
   if (key == CODED) {

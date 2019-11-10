@@ -26,9 +26,9 @@ void Info_Page2 () {
 
 
   compostButton = new Button("Play Compost Bin", 50, 450, 225, 50, 25);
-  recyclingButton = new Button("Play Recycling Bin", 550, 450, 225, 50, 25);
+  recyclingButton = new Button("Play Recycling Bin", 300, 450, 225, 50, 25);
   recyclingButton.Draw ();
   compostButton.Draw ();
-  trashButton = new Button("Play Trash Bin", 300, 450, 225, 50, 25);
+  trashButton = new Button("Play Trash Bin", 550, 450, 225, 50, 25);
   trashButton.Draw ();
 }
