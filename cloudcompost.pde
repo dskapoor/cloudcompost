@@ -45,7 +45,7 @@ bins[0] = loadImage("compost_bin.png");
 bins[1] = loadImage("recycling_bin.png");
 bins[2] = loadImage("trash_bin.png");
 
-cloud = loadImage("cloud.jpg");
+cloud = loadImage("cloud.png");
 
 }
 
