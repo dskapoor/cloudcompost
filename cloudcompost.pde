@@ -19,6 +19,11 @@ PImage[] images;
 PImage[] bins;
 PImage cloud;
 
+Drop[] drops;
+Drop d;
+
+int timer = 0;
+
 void setup () {
 //scene = 0;
 size(800, 600);
@@ -45,6 +50,12 @@ bins[0] = loadImage("compost_bin.png");
 bins[1] = loadImage("recycling_bin.png");
 bins[2] = loadImage("trash_bin.png");
 
+drops = new Drop[9];
+for (int i = 0; i < images.length; i++) {
+  drops[i] = new Drop(images[i]);
+}
+d = new Drop(images[0]);
+
 cloud = loadImage("cloud.png");
 
 }
@@ -68,7 +79,7 @@ else if (scene == 2) {
 }
 
 else if (scene == 3) {
-  Compost_Game ();
+  Rain ();
 }
 //image(apple, 100,100, 30, 30);  
 }
