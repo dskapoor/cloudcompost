@@ -17,6 +17,7 @@ PFont BodyFont;
 
 PImage[] images;
 PImage[] bins;
+PImage cloud;
 
 Drop[] drops;
 Drop d;
@@ -54,6 +55,8 @@ for (int i = 0; i < images.length; i++) {
   drops[i] = new Drop(images[i]);
 }
 d = new Drop(images[0]);
+
+cloud = loadImage("cloud.png");
 
 }
 
