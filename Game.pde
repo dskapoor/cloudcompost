@@ -5,7 +5,8 @@ int binSpeed = 5;
 int radius = 10; 
 boolean left, right;
 boolean goodCollision;
-boolean badCollision; 
+boolean badCollision;
+PImage activeBin;
 
 ArrayList<Drop> dropss = new ArrayList<Drop>();
 
@@ -27,15 +28,15 @@ void Game() {
     }
   }
 
-  image(bins[0], binX, binY, 100, 100); 
+  image(activeBin, binX, binY, 100, 100); 
 
   if (left) {
-    if (binX > radius) {
+    if (binX > radius-20) {
       binX = binX - binSpeed;
     }
   }
   if (right) {
-    if (binX < width-90) {
+    if (binX < width-80) {
       binX = binX + binSpeed;
     }
   }

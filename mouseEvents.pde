@@ -12,7 +12,16 @@ void mouseClicked() {
   //println("END"+ scene);
 
   else if (scene == 2) {
-    if (nextButton2.MouseIsOver() == true) {
+    if (compostButton.MouseIsOver() == true) {
+      activeBin = bins[0];
+      scene = 3;
+    }
+    if (recyclingButton.MouseIsOver() == true) {
+      activeBin = bins[1];
+      scene = 3;
+    }
+    if (trashButton.MouseIsOver() == true) {
+      activeBin = bins[2];
       scene = 3;
     }
   }

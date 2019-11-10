@@ -6,7 +6,7 @@ class ScoreDisplay {
   float w;
   float h; 
   int ts;
-  
+
   ScoreDisplay(String labelSD, float xposSD, float yposSD, float widthSD, float heightSD, int textSizeSD) {
     label = labelSD;
     x = xposSD;
@@ -14,10 +14,9 @@ class ScoreDisplay {
     w = widthSD;
     h = heightSD;
     ts = textSizeSD;
-}
+  }
 
-void display() {
-   text("Score = " +score, 750, 750); 
-   
-}
+  void display() {
+    text("Score = " +score, 750, 750);
+  }
 }
