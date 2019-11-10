@@ -2,8 +2,11 @@ int binX = 350;
 int binY = 500;
 int binSpeed = 5;
 int radius = 10; 
-int x3 = 0;
-int x4 = 300; 
+int x3 = 70;
+int x4 = 200;
+int x5 = 400;
+int x6 = 500;
+int x7 = 600;
 boolean left, right;
 boolean goodCollision;
 
@@ -16,21 +19,25 @@ ArrayList<Drop> dropss = new ArrayList<Drop>();
 
 void Game() {
 
-  image(storm_cloud, x3, 120, 100, 100);
-  image(storm_cloud, x4, 100, 200, 200);
-  image(storm_cloud, x3, 110, 300, 300);
-  image(storm_cloud, x4, 80, 110, 110);
-  image(storm_cloud, x3, 100, 300, 300);
-  x3+=.6; 
-  x4+=.4;
+  image(storm_cloud, x3, 20, 200, 140);
+  image(storm_cloud, x4, 20, 300, 200);
+  image(storm_cloud, x5, 10, 200, 140);
+  image(storm_cloud, x6, 30, 300, 200);
+  image(storm_cloud, x7, 10, 200, 140);
+  x3+=1.01; 
+  x4+=1.04;
+  x5+=1.05;
+  x6+=1.02;
+  x7+=1.01;
+ 
+ //for int x 
+ //if ((x3 > width)) { 
+ //    x3 = 0; 
+ //   }
   
-  if ((x3 > width)) { 
-    x3 = 0; 
-  }
-  
-    if ((x4 > width)) { 
-    x4 = 10; 
-  }
+  //  if ((x4 > width)) { 
+  //  x4 = 10; 
+  //}
  
   
 
