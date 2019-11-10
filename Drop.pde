@@ -12,7 +12,7 @@ class Drop {
   Drop(PImage p, Type t) {
     x = random(width);
     y = -20;
-    speed = random(2, 4);
+    speed = random(1, 3);
     this.p = p;
     type = t;
   }
