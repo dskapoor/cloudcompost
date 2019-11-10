@@ -1,6 +1,6 @@
 int score = 0; 
 int binX = 350;
-int binY = 500;
+int binY = 450;
 int binSpeed;
 int radius; 
 boolean left, right;
