@@ -18,6 +18,7 @@ PFont BodyFont;
 PImage[] images;
 PImage[] bins;
 PImage cloud;
+PImage storm_cloud; 
 
 Drop[] drops;
 Drop d;
@@ -57,6 +58,7 @@ void setup () {
   d = new Drop(images[0]);
 
   cloud = loadImage("cloud.png");
+  storm_cloud = loadImage("dark_cloud.png"); 
 }
 
 void draw () {
