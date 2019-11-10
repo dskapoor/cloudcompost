@@ -56,5 +56,13 @@ landingPage ();
 else if (scene == 1) {
 Info_Page ();
 }
+
+else if (scene == 2) {
+  Info_Page2 ();
+}
+
+else if (scene == 3) {
+  Compost_Game ();
+}
 //image(apple, 100,100, 30, 30);  
 }
