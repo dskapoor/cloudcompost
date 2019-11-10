@@ -15,6 +15,9 @@ PImage trash;
 PFont TitleFont;
 PFont BodyFont;
 
+PImage[] images;
+PImage[] bins;
+
 void setup () {
 //scene = 0;
 size(800, 600);
@@ -25,7 +28,7 @@ textFont(TitleFont);
 
 background(110, 202, 227);
 //sets background color to blue
-PImage[] images = new PImage[9];
+images = new PImage[9];
 images[0] = loadImage("apple.png");
 images[1] = loadImage("bowl.png");
 images[2] = loadImage("coffee_filter.jpeg");
@@ -36,7 +39,7 @@ images[6] = loadImage("diaper.png");
 images[7] = loadImage("ceramic.png");
 images[8] = loadImage("lightbulb.png");
 
-PImage [] bins = new PImage[3];
+bins = new PImage[3];
 bins[0] = loadImage("compost_bin.png");
 bins[1] = loadImage("recycling_bin.png");
 bins[2] = loadImage("trash_bin.png");
