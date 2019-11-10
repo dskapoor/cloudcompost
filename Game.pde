@@ -40,8 +40,16 @@ void Game() {
       binX = binX + binSpeed;
     }
   }
-  
+
   score.display();
+
+  for (int i = 0; i < dropss.size(); i++) {
+    if (dropss.get(i).y > (binY - 50) && dropss.get(i).y < (binY + 0) && dropss.get(i).x > (binX - 20) && dropss.get(i).x < (binX + 60)) {
+      Drop d = dropss.remove(i);
+      text("+100", d.x, d.y);
+      score.score+= 100;
+    }
+  }
 }
 
 
@@ -84,10 +92,10 @@ void keyReleased () {
 void scoreCounter () {
 
 
-//  //insert code so that when correct collision occurs, score = score + 5
-//  if ( (goodCollision == true) ) { 
-//    score = score + 5;
-//  } else if ( (badCollision == true) ) {    
-//    score = score - 5;
-//  }
+  //  //insert code so that when correct collision occurs, score = score + 5
+  //  if ( (goodCollision == true) ) { 
+  //    score = score + 5;
+  //  } else if ( (badCollision == true) ) {    
+  //    score = score - 5;
+  //  }
 } 
