@@ -21,12 +21,12 @@ ArrayList<TimeoutText> removed = new ArrayList<TimeoutText>();
 
 void Game() {
   timer++;
-  if (timer % 100 == 0) {
+  if (timer % 60 == 0) {
     int r = (int) random(0, 9);
     Drop d;
     if (r >= 0 && r <= 2) {
       d = new Drop(images[r], Type.COMPOST);
-    } else if (r >= 3 && r <= 6) {
+    } else if (r >= 3 && r <= 5) {
       d = new Drop(images[r], Type.RECYCLE);
     } else {
       d = new Drop(images[r], Type.TRASH);

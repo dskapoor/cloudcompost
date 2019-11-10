@@ -1,2 +1,4 @@
 
-void Info_Page () {
+void End_Page () {
+  
+}
