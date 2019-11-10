@@ -1,7 +1,6 @@
 class ScoreDisplay { 
   String label; 
   int score; 
-  //String join(label, score);
   float x;
   float y; 
   float w;
@@ -15,5 +14,10 @@ class ScoreDisplay {
     w = widthSD;
     h = heightSD;
     ts = textSizeSD;
+}
+
+void display() {
+   text("Score = " +score, 750, 750); 
+   
 }
 }
