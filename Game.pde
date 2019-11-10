@@ -1,24 +1,36 @@
 int binX = 350;
 int binY = 500;
-int binSpeed = 5;
+int binSpeed = 8;
 int radius = 10; 
 boolean left, right;
 boolean goodCollision;
 
 boolean badCollision;
 PImage activeBin;
+Type activeType;
 ScoreDisplay score = new ScoreDisplay();
 ArrayList<Drop> dropss = new ArrayList<Drop>();
+ArrayList<TimeoutText> removed = new ArrayList<TimeoutText>();
 
 
 
 void Game() {
 
 
-  
+
   timer++;
   if (timer % 100 == 0) {
-    Drop d = new Drop(images[(int) random(0, 9)]);
+    int r = (int) random(0, 9);
+    Drop d;
+    if (r >= 0 && r <= 2) {
+      d = new Drop(images[r], Type.COMPOST);
+    }
+    else if (r >= 3 && r <= 6) {
+      d = new Drop(images[r], Type.RECYCLE);
+    }
+    else {
+      d = new Drop(images[r], Type.TRASH);
+    }
     dropss.add(d);
   }
 
@@ -28,7 +40,7 @@ void Game() {
   }
 
   for (int i = 0; i < dropss.size(); i++) {
-    if (d.y > height) {
+    if (dropss.get(i).y > height) {
       dropss.remove(i);
     }
   }
@@ -51,8 +63,17 @@ void Game() {
   for (int i = 0; i < dropss.size(); i++) {
     if (dropss.get(i).y > (binY - 50) && dropss.get(i).y < (binY + 0) && dropss.get(i).x > (binX - 20) && dropss.get(i).x < (binX + 60)) {
       Drop d = dropss.remove(i);
-      text("+100", d.x, d.y);
-      score.score+= 100;
+      TimeoutText t = new TimeoutText(d.x, d.y, activeType == d.type);
+      t.changeScore();
+      removed.add(t);
+    }
+  }
+
+  for (int i = 0; i < removed.size(); i++) {
+    removed.get(i).timer++;
+    removed.get(i).display();
+    if (removed.get(i).timer > 60) {
+      removed.remove(i);
     }
   }
 }
