@@ -1,13 +1,54 @@
-int binX;
-int binY;
+int binX = 350;
+int binY = 500;
 int binSpeed;
-
+int radius; 
+boolean left, right;
 
 void Compost_Game () {
+image(bins[0], binX, binY, 80, 80); 
+binSpeed = 5;
+radius = 10;
+//binX = 350;
+//binY = 500;
+if (left) {
+    binX = binX - binSpeed;
+}
+if (right) {
+    binX = binX + binSpeed;
+}
+  
+}
 
-image(bins[0], 350, 500, 80, 80); 
-  
-  
-  
-  
+void keyPressed () {
+if (key == CODED) {
+{if ( (keyCode == LEFT) && (binX > radius) )
+  {
+  left = true;
+  } else {
+   left = false; 
+  }
+
+  if ( (keyCode == RIGHT) && (binX < width-95) )
+  {
+  right = true;
+  } else {
+   right = false; 
+  }
+}
+}
+}
+
+void keyReleased () {
+if (key == CODED) {
+{if ( (keyCode == LEFT) && (binX > radius) )
+  {
+  left = false;
+  }
+
+  if ( (keyCode == RIGHT) && (binX < width) )
+  {
+    right = false;
+  }
+}
+}
 }
